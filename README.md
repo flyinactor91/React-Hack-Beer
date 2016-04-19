@@ -1,1 +1,1 @@
-**React Hack Night - BeerTab
+#React Hack Night - BeerTab
