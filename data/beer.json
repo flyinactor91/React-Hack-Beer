@@ -9,6 +9,12 @@
         "id": 2,
         "name": "Blandium",
         "desc": "Anything but",
-        "stars": 3
+        "stars": 4
+    },
+    {
+        "id": 3,
+        "name": "I Don't Drink",
+        "desc": "Fool your friends",
+        "stars": 2
     }
 ]
