@@ -6,12 +6,22 @@
 body, html {
   display: block;
   margin: 0;
+  background-color: #0f93b2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-name {
+  text-align: center;
+  color: #be681a;
+  font-size: 48pt;
+  margin: 0px;
 }
 
 .bar {
   border: solid;
-  margin: 5px;
-  padding: 15px;
+  margin: 5px 10px 5px 10px;
+  padding: 0px 15px;
+  background-color: #9fedff;
 }
 
 .bar-name {
@@ -28,8 +38,9 @@ body, html {
 
 .beer {
   border: solid;
-  margin: 10px;
-  padding: 15px;
+  margin: 10px 0px;
+  padding: 0px 15px;
+  background-color: #ffca9a;
 }
 
 .beer-name {

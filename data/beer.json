@@ -1,12 +1,14 @@
 [
     {
         "id": 1,
-        "name": "Ruinum",
-        "desc": "It caused the fall of the Roman Empire"
+        "name": "Ruinum < >",
+        "desc": "It caused the fall of the Roman Empire",
+        "stars": 5
     },
     {
         "id": 2,
         "name": "Blandium",
-        "desc": "Anything but"
+        "desc": "Anything but",
+        "stars": 3
     }
 ]

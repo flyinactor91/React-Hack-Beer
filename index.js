@@ -25,6 +25,17 @@ class BeerApp extends React.Component {
     this._fetchData();
   }
   
+  componentDidMount() {
+    this._timer = setInterval(
+      () => this._fetchData(),
+      5000
+    );
+  }
+  
+  componentWillUnmount() {
+    clearInterval(this._timer);
+  }
+  
   _fetchData() {
     $.getJSON('src/data/bars.json', (bars) => {
       this.setState({ bars })
@@ -38,8 +49,10 @@ class BeerApp extends React.Component {
   _getBeer(beerList) {
     let minibeer = [];
     for (var i=0;i<beerList.length;i++) {
-      let thisbeer = this.state.beer[beerList[i]-1];
+      let thisbeer = this.state.beer[beerList[i][0]-1];
       if (thisbeer) {
+        thisbeer.ourStars = beerList[i][1];
+        thisbeer.review = beerList[i][2];
         minibeer.push(thisbeer);
       }
     }
@@ -54,6 +67,9 @@ class BeerApp extends React.Component {
           <Beer 
             name={beer.name}
             desc={beer.desc}
+            stars={beer.stars}
+            ourStars={beer.ourStars}
+            review={beer.review}
             key={beer.id} />
         );
       });
@@ -76,7 +92,7 @@ class BeerApp extends React.Component {
     let bars = this._getBars();
     return (
       <div>
-        <h1>BeerTab</h1>
+        <h1 className='app-name'>BeerTab</h1>
         {bars}
       </div>
     );
