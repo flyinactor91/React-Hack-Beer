@@ -2,11 +2,13 @@
     {
         "id": 1,
         "name": "The Place",
-        "desc": "Know know..." 
+        "desc": "Know know...",
+        "beer": [1,2]
     },
     {
         "id": 2,
         "name": "The Tab",
-        "desc": "Let the good times flow"
+        "desc": "Let the good times flow",
+        "beer": [1]
     }
 ]
