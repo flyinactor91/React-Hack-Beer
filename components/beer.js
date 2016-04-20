@@ -3,9 +3,9 @@ import React from 'react';
 class Beer extends React.Component {
   render() {
     return (
-        <div>
-          <h4>{this.props.name}</h4>
-          <p>{this.props.desc}</p>
+        <div className='beer'>
+          <h3 className='beer-name'>{this.props.name}</h3>
+          <p className='beer-desc'>{this.props.desc}</p>
         </div>
     );
   }

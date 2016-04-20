@@ -29,33 +29,26 @@ class BeerApp extends React.Component {
     $.getJSON('src/data/bars.json', (bars) => {
       this.setState({ bars })
     });
-    /*$.getJSON('src/data/beer.json', (beer) => {
+    $.getJSON('src/data/beer.json', (beer) => {
+      console.log('Got Beer')
       this.setState({ beer })
-    });*/
-    let beer = [
-      {
-        "id": 1,
-        "name": "Ruinum",
-        "desc": "It caused the fall of the Roman Empire"
-      },
-      {
-        "id": 2,
-        "name": "Blandium",
-        "desc": "Anything but"
-      }
-    ]
-    this.setState({ beer });
+    });
   }
   
   _getBeer(beerList) {
     let minibeer = [];
     for (var i=0;i<beerList.length;i++) {
       let thisbeer = this.state.beer[beerList[i]-1];
-      minibeer.push(thisbeer);
+      if (thisbeer) {
+        minibeer.push(thisbeer);
+      }
     }
-    if (minibeer === []) {
+    console.log(minibeer.length);
+    if (minibeer.length === 0) {
+      console.log('0 ret')
       return;
     } else {
+      console.log('Returning Beer');
       return minibeer.map((beer) => {
         return (
           <Beer 
@@ -83,7 +76,7 @@ class BeerApp extends React.Component {
     let bars = this._getBars();
     return (
       <div>
-        <h2>BeerTab</h2>
+        <h1>BeerTab</h1>
         {bars}
       </div>
     );
